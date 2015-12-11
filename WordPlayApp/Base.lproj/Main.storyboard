@@ -1,25 +1,234 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nEB-mK-wXv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WordPlayApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="VM7-8V-3pk">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQ6-Xu-9lj">
+                                <rect key="frame" x="369" y="194" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="insertNoun:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycR-VI-h9T"/>
+                                    <segue destination="lH0-Je-mZD" kind="show" id="iIJ-Ka-ZZH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Input A Noun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEo-5O-5Yo">
+                                <rect key="frame" x="334" y="106" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xgW-Tu-LdY">
+                                <rect key="frame" x="318" y="147" width="133" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yCm-0L-a7M"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VM7-8V-3pk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="YKK-ex-jda"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VM7-8V-3pk" secondAttribute="bottom" id="ns7-qM-5fl"/>
+                            <constraint firstItem="VM7-8V-3pk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="vnV-VA-irY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VM7-8V-3pk" secondAttribute="trailing" constant="-20" id="zhL-KW-aQv"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hrb-IR-nwX"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="nounTextField" destination="xgW-Tu-LdY" id="g9C-sR-yd2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="808" y="-359"/>
+        </scene>
+        <!--Verb View Controller-->
+        <scene sceneID="yUB-iO-r78">
+            <objects>
+                <viewController id="lH0-Je-mZD" customClass="verbViewController" customModule="WordPlayApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nqi-po-qWU"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Er-j3-l5i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q3v-qy-NR4">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NQf-4c-oKn">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxY-C7-J4D">
+                                <rect key="frame" x="369" y="194" width="30" height="30"/>
+                                <state key="normal" title="App"/>
+                                <connections>
+                                    <action selector="insertVerb:" destination="lH0-Je-mZD" eventType="touchUpInside" id="qPJ-HF-S2B"/>
+                                    <segue destination="jdT-EW-wCQ" kind="show" id="cuh-39-oGC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCk-ge-nK4">
+                                <rect key="frame" x="318" y="147" width="133" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="lH0-Je-mZD" id="VPb-Tj-LCq"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert A Verb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nq-E4-748">
+                                <rect key="frame" x="334" y="106" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NQf-4c-oKn" firstAttribute="top" secondItem="q3v-qy-NR4" secondAttribute="topMargin" id="0aF-4a-F4S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NQf-4c-oKn" secondAttribute="trailing" constant="-20" id="1I3-8y-BXG"/>
+                            <constraint firstItem="NQf-4c-oKn" firstAttribute="leading" secondItem="q3v-qy-NR4" secondAttribute="leadingMargin" constant="-20" id="JZ9-l0-Rb4"/>
+                            <constraint firstItem="8Er-j3-l5i" firstAttribute="top" secondItem="NQf-4c-oKn" secondAttribute="bottom" id="mEE-hn-R4h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="verbTextField" destination="NCk-ge-nK4" id="Azv-eq-ooA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYm-a9-zn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1687" y="-343"/>
+        </scene>
+        <!--Adjective View Controller-->
+        <scene sceneID="dTT-X1-acw">
+            <objects>
+                <viewController id="jdT-EW-wCQ" customClass="adjectiveViewController" customModule="WordPlayApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uBw-fQ-dC4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Akp-DT-n8t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="htc-oT-SCj">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="FG5-Bz-oav">
+                                <rect key="frame" x="0.0" y="8" width="768" height="1024"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taA-OX-1KE">
+                                <rect key="frame" x="369" y="194" width="30" height="30"/>
+                                <state key="normal" title="App"/>
+                                <connections>
+                                    <action selector="insertAdjective:" destination="jdT-EW-wCQ" eventType="touchUpInside" id="zjA-oH-fok"/>
+                                    <segue destination="XhG-aH-t4c" kind="show" id="9zK-sy-oyT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert An Adjective" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gr3-xL-mEv">
+                                <rect key="frame" x="315" y="106" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WnU-ym-dOo">
+                                <rect key="frame" x="318" y="147" width="133" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jdT-EW-wCQ" id="igt-aP-fWS"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FG5-Bz-oav" firstAttribute="leading" secondItem="htc-oT-SCj" secondAttribute="leadingMargin" constant="-20" id="AkL-mX-1Vj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FG5-Bz-oav" secondAttribute="trailing" constant="-20" id="hKK-Wy-N5e"/>
+                            <constraint firstItem="FG5-Bz-oav" firstAttribute="top" secondItem="htc-oT-SCj" secondAttribute="topMargin" constant="8" id="r3G-w5-XO1"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="FG5-Bz-oav" secondAttribute="bottom" constant="-8" id="wkc-9g-gVT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adjectiveTextField" destination="WnU-ym-dOo" id="Col-Wo-HPw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lc3-co-6Rx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2629" y="-343"/>
+        </scene>
+        <!--Final View Controller-->
+        <scene sceneID="3cR-cz-WAM">
+            <objects>
+                <viewController id="XhG-aH-t4c" customClass="finalViewController" customModule="WordPlayApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wlx-X4-UbS"/>
+                        <viewControllerLayoutGuide type="bottom" id="s6H-JT-znb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TV1-ah-P7g">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="xLI-uN-QLH">
+                                <rect key="frame" x="-69" y="0.0" width="837" height="1044"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLV-hY-UPc">
+                                <rect key="frame" x="60" y="114" width="615" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xLI-uN-QLH" secondAttribute="trailing" constant="-20" id="FXV-BS-ofg"/>
+                            <constraint firstItem="xLI-uN-QLH" firstAttribute="top" secondItem="TV1-ah-P7g" secondAttribute="topMargin" id="cKf-cs-iKr"/>
+                            <constraint firstItem="xLI-uN-QLH" firstAttribute="leading" secondItem="TV1-ah-P7g" secondAttribute="leadingMargin" constant="-89" id="mHA-Uk-2lh"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="xLI-uN-QLH" secondAttribute="bottom" constant="-20" id="zHh-Mh-dbi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myLabel" destination="WLV-hY-UPc" id="gdT-ny-Hoi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IE9-JY-Rab" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3541" y="-343"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lno-ch-YVR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nEB-mK-wXv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uvp-RH-Nb3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ppG-ps-VJK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fL6-ZC-lmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-177" y="-343"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="1536" height="2048"/>
+    </resources>
 </document>

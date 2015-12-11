@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7D8231D1C1772C100FDA67F /* MadLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D8231C1C1772C100FDA67F /* MadLib.swift */; };
+		D7EB99591C16245300CA970E /* verbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EB99581C16245300CA970E /* verbViewController.swift */; };
+		D7EB995B1C1624A800CA970E /* adjectiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EB995A1C1624A800CA970E /* adjectiveViewController.swift */; };
+		D7EB995D1C1624D800CA970E /* finalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EB995C1C1624D800CA970E /* finalViewController.swift */; };
 		D7F783CA1C10DD7800DAE825 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F783C91C10DD7800DAE825 /* AppDelegate.swift */; };
 		D7F783CC1C10DD7800DAE825 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F783CB1C10DD7800DAE825 /* ViewController.swift */; };
 		D7F783CF1C10DD7800DAE825 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F783CD1C10DD7800DAE825 /* Main.storyboard */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D7D8231C1C1772C100FDA67F /* MadLib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MadLib.swift; path = ../MadLib.swift; sourceTree = "<group>"; };
+		D7EB99581C16245300CA970E /* verbViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = verbViewController.swift; sourceTree = "<group>"; };
+		D7EB995A1C1624A800CA970E /* adjectiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = adjectiveViewController.swift; path = ../adjectiveViewController.swift; sourceTree = "<group>"; };
+		D7EB995C1C1624D800CA970E /* finalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = finalViewController.swift; sourceTree = "<group>"; };
 		D7F783C61C10DD7800DAE825 /* WordPlayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordPlayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F783C91C10DD7800DAE825 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7F783CB1C10DD7800DAE825 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,9 +105,13 @@
 		D7F783C81C10DD7800DAE825 /* WordPlayApp */ = {
 			isa = PBXGroup;
 			children = (
+				D7D8231C1C1772C100FDA67F /* MadLib.swift */,
 				D7F783C91C10DD7800DAE825 /* AppDelegate.swift */,
-				D7F783CB1C10DD7800DAE825 /* ViewController.swift */,
 				D7F783CD1C10DD7800DAE825 /* Main.storyboard */,
+				D7F783CB1C10DD7800DAE825 /* ViewController.swift */,
+				D7EB99581C16245300CA970E /* verbViewController.swift */,
+				D7EB995A1C1624A800CA970E /* adjectiveViewController.swift */,
+				D7EB995C1C1624D800CA970E /* finalViewController.swift */,
 				D7F783D01C10DD7800DAE825 /* Assets.xcassets */,
 				D7F783D21C10DD7800DAE825 /* LaunchScreen.storyboard */,
 				D7F783D51C10DD7800DAE825 /* Info.plist */,
@@ -257,6 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7F783CC1C10DD7800DAE825 /* ViewController.swift in Sources */,
+				D7EB995D1C1624D800CA970E /* finalViewController.swift in Sources */,
+				D7D8231D1C1772C100FDA67F /* MadLib.swift in Sources */,
+				D7EB99591C16245300CA970E /* verbViewController.swift in Sources */,
+				D7EB995B1C1624A800CA970E /* adjectiveViewController.swift in Sources */,
 				D7F783CA1C10DD7800DAE825 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +500,7 @@
 				D7F783F01C10DD7800DAE825 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7F783F11C10DD7800DAE825 /* Build configuration list for PBXNativeTarget "WordPlayAppTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +509,7 @@
 				D7F783F31C10DD7800DAE825 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7F783F41C10DD7800DAE825 /* Build configuration list for PBXNativeTarget "WordPlayAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +518,7 @@
 				D7F783F61C10DD7800DAE825 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,16 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nounTextField: UITextField!
+    
+    var words = MadLib()
+    @IBAction func insertNoun(sender: UIButton) {
+        words.noun = nounTextField.text!
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        }
+  
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let next = segue.destinationViewController as! verbViewController
+        next.words = words
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+    
+        
+        
+        
+    
+    
+    
+    
+    
+    
 
 }
-
